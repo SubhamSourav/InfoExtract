@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", serif;
+}
+
+body {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.container {
+  width: 860px;
+  max-width: 95%;
+  height: 100%;
+  margin: auto;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+hr {
+  margin: 30px auto;
+}
+
+img {
+  max-width: 50%;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007bff; /* Primary blue color */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  font-weight: 600; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Hide the default file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Style the custom label as a button */
+.custom-file-upload {
+  display: inline-block;
+  background-color: #007bff; /* Primary blue color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.custom-file-upload:active {
+  background-color: #004494; /* Even darker blue when clicked */
+  transform: scale(0.95); /* Slightly shrink on click */
+}
