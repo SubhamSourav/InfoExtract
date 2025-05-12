@@ -1,54 +1,45 @@
-# React + TypeScript + Vite
+# InfoExtract
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+InfoExtract is an intelligent document processing platform that uses AI to extract, analyze, and summarize content from various file formats, including PDFs & images. It also features an interactive chatbot interface that provides concise, text-only answers to user queries based on the uploaded document.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Document Upload**: Upload PDFs, images, or scanned documents for processing.
+- **AI-Powered Chatbot**: Ask questions about the uploaded document and receive concise, text-only responses.
+- **Content Summarization**: Automatically generate a summary of the uploaded document.
+- **Multi-Format Support**: Supports file types such as `.pdf`, `.jpg`, `.jpeg`, and `.png`.
+- **Error Handling**: Provides clear error messages for unsupported formats or processing issues.
+- **Interactive UI**: A user-friendly interface to upload documents, view summaries, and interact with the chatbot.
 
-## Expanding the ESLint configuration
+## How It Works
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Upload a Document
+- Users can upload a document (PDF or image) using the **"Choose File"** button.
+- The file is processed, and its content is extracted for analysis.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 2. Generate a Summary
+- The application uses AI to generate a concise summary of the document's content.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 3. Ask Questions
+- Users can interact with the chatbot by asking questions about the uploaded document.
+- The chatbot responds with short, text-only answers based on the document’s content.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 4. Upload a New Document
+- Users can reset the application and upload a new document for processing.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Technologies Used
+
+### Frontend:
+- **React.js** for the UI
+- **TypeScript** for type safety
+- **CSS** for styling and responsiveness
+
+### Backend:
+- **AI-powered Content Generation** using Google GenAI (Gemini 2.0 Flash model)
+
+### File Handling:
+- **Base64 encoding** for file uploads
+- **MIME type detection** for file validation to ensure supported formats
+
+### Environment Variables:
+- **API keys** and sensitive configurations are managed using `.env` files to ensure secure handling.
